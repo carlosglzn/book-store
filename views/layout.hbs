@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+        
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+
+        <title>Book Store</title>
+
+    </head>
+
+    <body>
+        
+        <nav>
+
+            <ul>
+
+                <li id="to-left">
+                    
+                    <p><a href="/">Book Store</a></p>
+                
+                </li>
+
+                <li id="to-right">
+
+                    {{#if userFound}}
+                    
+                    <span>Hello {{userFound.email}}!</span>
+
+                    <a href="/userprofile">My Profile</a>
+
+                    <form id="logout-form" action="/logout" method="POST">
+                        
+                        <button>Logout</button>
+
+                    </form>
+
+                    {{else}}
+
+                    <a href="/signup">Signup</a> <span> | </span>
+                    
+                    <a href="/login">Login</a>
+
+                    {{/if}}
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+        {{{body}}}
+
+        <script src="/js/script.js"></script>
+        
+    </body>
+
+</html>
