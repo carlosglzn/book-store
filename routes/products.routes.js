@@ -19,6 +19,8 @@ router.get('/products/:id/edit', productController.editProduct)
 
 router.post('/products/:id/edit', fileUploader.single('product-cover-image'), productController.updateProduct)
 
+router.get('/products/:id', productController.productDetails)
+
 // 3. EXPORTS
 
 module.exports = router

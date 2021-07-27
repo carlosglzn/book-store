@@ -1,5 +1,6 @@
-<div class="small-container">
+
     <h2 class="title">Product List</h2>
+    <div class="small-container"></div>
     <div class="row">
     {{#each products}}
     <div class="col-3">
@@ -8,13 +9,11 @@
         <h5>{{author}}</h5>
         <a href="/products/{{id}}/edit" class="btn">Edit</a>
     </div>
+    </div>
 
     {{else}}
 
     <p>There are no products yet!</p>
 
     {{/each}}
-
-</div>
-
 

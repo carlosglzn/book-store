@@ -61,6 +61,8 @@ exports.editProduct = async (req, res) => {
         })
 }
 
+// POST - /products/:id/edit
+
 exports.updateProduct = async (req, res) => {
 
     const { id } = req.params
@@ -77,6 +79,25 @@ exports.updateProduct = async (req, res) => {
     Product.findByIdAndUpdate(id, { name, author, imageUrl }, {new: true})
         .then(() => {
             res.redirect('/products')
+        })
+        .catch((e) => {
+            console.log(e)
+        })
+
+}
+
+// GET - /products/:id
+
+exports.productDetails = async (req, res) => {
+
+    const { id } = req.params
+
+    Product.findById(id)
+        .then((productFound) => {
+            console.log(productFound)
+            res.render('products/product-detail', {
+                product: productFound
+            })
         })
         .catch((e) => {
             console.log(e)

@@ -1,0 +1,27 @@
+
+
+<div class="small-container single-product">
+    <div class="row">
+
+        {{#with product}}
+            <div class="col-2">
+                <img src="{{imageUrl}}" width="75%" alt="{{name}}">
+            </div>
+            <div class="col-2">
+                <p>Fantasy</p>
+                <h1>{{name}}</h1>
+                <h3>Author: {{author}}</h3>
+                <br>
+                <h5>Price: $40</h5>
+                <br>
+                <h5>Language: English</h5>
+                <input type="number" value="1">
+                <a href="#" class="btn">Add To Cart</a>
+
+                <h3>Synopsis:</h3>
+                <br>
+                <p>Long ago, in a time forgotten, a preternatural event threw the seasons out of balance. In a land where summers can last decades and winters a lifetime, trouble is brewing. The cold is returning, and in the frozen wastes to the north of Winterfell, sinister and supernatural forces are massing beyond the kingdom's protective Wall.</p>             
+            </div>
+        {{/with}}
+    </div>
+</div>

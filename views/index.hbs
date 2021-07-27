@@ -22,7 +22,7 @@
     <div class="row">
         {{#each products}}
             <div class="col-3">
-                <img src="{{imageUrl}}" alt="{{name}}">
+                <a href="/products/{{_id}}"><img src="{{imageUrl}}" alt="{{name}}"></a>
                 <h4>{{name}}</h4>
                 <h5>{{author}}</h5>
             </div>

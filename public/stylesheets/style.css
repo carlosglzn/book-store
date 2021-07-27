@@ -239,4 +239,44 @@ ul {
     .col-2, .col-3 {
         flex-basis: 100%;
     }
+
+    .single-product h1 {
+        font-size: 26px;
+        line-height: 32px;
+    }
 }
+
+/* Single Product Details */
+
+.single-product {
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.single-product .col-2 img {
+    padding: 0; 
+}
+
+.single-product .col-2 {
+    padding: 20px;
+}
+
+.single-product h4 {
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.single-product input {
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #66559e;
+}
+
+input:focus {
+    outline: none;
+}
+
