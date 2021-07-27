@@ -41,6 +41,9 @@ const userSchema = new Schema(
             state: String,
             zip: Number
         }
+    },
+    {
+        timestamps: true
     }
  
 );

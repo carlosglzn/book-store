@@ -29,11 +29,15 @@ exports.createProduct = async (req, res) => {
 
 exports.processProduct = async (req, res) => {
 
-    const { name, author } = req.body
+    const { name, author, category, price, language, synopsis } = req.body
 
     Product.create({
         name,
         author,
+        category,
+        price,
+        language,
+        synopsis,
         imageUrl: req.file.path
     })
     .then((productCreated) => {

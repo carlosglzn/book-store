@@ -10,11 +10,10 @@ const productSchema = new Schema(
         name: String,
         author: String,
         imageUrl: String,
-        skus: {
-            sku: String,
-            quantity: Number,
-            feature: String
-        }
+        category: String,
+        price: Number,
+        language: String,
+        synopsis: String
     },
     {
         timestamps: true
