@@ -8,6 +8,7 @@ const indexController   = require('./../controllers/indexController')
 
 router.get('/', indexController.startHome)
 
+
 // 3. EXPORTS
 
 module.exports = router

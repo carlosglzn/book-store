@@ -1,2 +1,31 @@
+{{!-- banner --}}
 
-Hello!
+<div class="background">  
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <h1>Find Your Next<br>New Adventure!</h1>
+                <p>Live a lot of adventures reading books.<br>From classics to adventure and horror.<br>We have them all <u>here.</u></p>
+                <a href="/products" class="btn">Shop Now &#8594;</a>
+            </div>
+            <div class="col-2">
+                <img src="/images/banner_books.png" alt="Banner Books Image">
+            </div>
+        </div>
+    </div>
+</div>  
+
+{{!-- products --}}
+
+<div class="small-container">
+    <h2 class="title">Featured Products</h2>
+    <div class="row">
+        {{#each products}}
+            <div class="col-3">
+                <img src="{{imageUrl}}" alt="{{name}}">
+                <h4>{{name}}</h4>
+                <h5>{{author}}</h5>
+            </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,29 +1,12 @@
-<h1>Product List</h1>
-
-<hr>
-
-<div class="row">
-
+<div class="small-container">
+    <h2 class="title">Product List</h2>
+    <div class="row">
     {{#each products}}
-
-    <div class="col-md-4 mb-5">
-
-        <div class="card" style="width: 18rem;">
-
-            <img src="{{imageUrl}}" class="card-img-top" alt="{{title}}">
-
-            <div class="card-body">
-
-                <h5 class="card-title">{{name}}</h5>
-
-                <p class="card-text">{{author}}</p>
-
-                <a href="/products/{{id}}/edit" class="btn btn-primary">Edit</a>
-            
-            </div>
-
-        </div>
-
+    <div class="col-3">
+        <img src="{{imageUrl}}" class="card-img-top" alt="{{title}}">
+        <h4>{{name}}</h4>
+        <h5>{{author}}</h5>
+        <a href="/products/{{id}}/edit" class="btn">Edit</a>
     </div>
 
     {{else}}
@@ -32,6 +15,6 @@
 
     {{/each}}
 
-    <hr />
-
 </div>
+
+
