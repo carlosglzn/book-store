@@ -38,9 +38,10 @@ exports.createUser = async (req, res) => {
                 lastName,
                 email,
                 password: hashedPassword,
-                billingAddress,
-                shippingAddress
             })
+        })
+        .catch((e) => {
+            console.log(e)
         })
         .then(userCreated => {
             console.log("User created:", userCreated)

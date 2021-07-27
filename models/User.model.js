@@ -27,14 +27,10 @@ const userSchema = new Schema(
             type: String,
             require: [true, 'Password is required.']
         },
-        billingAddress: {
-            country: String,
-            street: String,
-            city: String,
-            state: String,
-            zip: Number
+        role: {
+            type: String
         },
-        shippingAddress: {
+        address: {
             country: String,
             street: String,
             city: String,

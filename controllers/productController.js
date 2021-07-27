@@ -1,5 +1,21 @@
 const Product = require('./../models/Product.model')
 
+// GET - /productsAdmin
+
+exports.listProductsAdmin = async (req, res) => {
+
+    Product.find({})
+        .then(productsFound => {
+            res.render('products/product-list-admin', {
+                products: productsFound
+            })
+        })
+        .catch((e) => {
+            console.log(e)
+        })
+
+}
+
 // GET - /products
 
 exports.listProducts = async (req, res) => {
@@ -16,7 +32,8 @@ exports.listProducts = async (req, res) => {
 
 }
 
-// GET - /products/create
+
+// GET - /productsAdmin/create
 
 exports.createProduct = async (req, res) => {
 
@@ -25,7 +42,7 @@ exports.createProduct = async (req, res) => {
 }
 
 
-// POST - /products/create
+// POST - /productsAdmin/create
 
 exports.processProduct = async (req, res) => {
 
@@ -50,7 +67,7 @@ exports.processProduct = async (req, res) => {
 
 }
 
-// GET - /products/:id/edit
+// GET - /productsAdmin/:id/edit
 
 exports.editProduct = async (req, res) => {
 
@@ -65,7 +82,7 @@ exports.editProduct = async (req, res) => {
         })
 }
 
-// POST - /products/:id/edit
+// POST - /productsAdmin/:id/edit
 
 exports.updateProduct = async (req, res) => {
 
