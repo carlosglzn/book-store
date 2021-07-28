@@ -11,19 +11,19 @@ const { isLoggedIn, isLoggedOut, authPage } = require('../middleware/route-guard
 
 // PROUDCTS ADMIN
 
-router.get('/productsAdmin', productController.listProductsAdmin)
+router.get('/productsAdmin', isLoggedIn, productController.listProductsAdmin)
 
 // PRODUCTS ADMIN CREATE
 
-router.get('/productsAdmin/create', productController.createProduct)
+router.get('/productsAdmin/create', isLoggedIn, productController.createProduct)
 
-router.post('/productsAdmin/create', fileUploader.single('product-cover-image'), productController.processProduct)
+router.post('/productsAdmin/create', isLoggedIn, fileUploader.single('product-cover-image'), productController.processProduct)
 
 // PRODUCTS ADMIN EDIT
 
-router.get('/productsAdmin/:id/edit', productController.editProduct)
+router.get('/productsAdmin/:id/edit', isLoggedIn, productController.editProduct)
 
-router.post('/productsAdmin/:id/edit', fileUploader.single('product-cover-image'), productController.updateProduct)
+router.post('/productsAdmin/:id/edit', isLoggedIn, fileUploader.single('product-cover-image'), productController.updateProduct)
 
 
 // ALL PRODUCTS CLIENT

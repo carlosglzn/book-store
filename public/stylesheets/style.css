@@ -386,3 +386,48 @@ form .btn:focus {
 form a {
     font-size: 12px;
 }
+
+/* CART */
+
+.cart-page {
+    margin: 80px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th {
+    text-align: left;
+    padding: 5px;
+    color: white;
+    background: #361999;
+    font-weight: normal;
+}
+
+td {
+    padding: 10px 5px;
+}
+
+td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a {
+    color: #361999;
+    font-size: 12px;
+}
+
+td img {
+    width: 50px;
+    height: 80px;
+    margin-right: 10px;
+}

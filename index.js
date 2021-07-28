@@ -35,6 +35,16 @@ require('./config/session.config')(app);
 
 app.use(express.static('public'));
 
+
+// LAYOUT MIDDLEWARE
+
+app.use((req, res, next) => {
+    res.locals.actualUser
+
+    next()
+
+})
+
 // 3. ROUTES
 
 
@@ -46,6 +56,9 @@ app.use('/', auth)
 
 const products = require('./routes/products.routes')
 app.use('/', products)
+
+const checkout = require('./routes/checkout.routes')
+app.use('/', checkout)
 
 
 // 4. SERVER

@@ -3,28 +3,30 @@
 const express           = require('express')
 const router            = express.Router()
 const authController    = require('./../controllers/authController')
+const { isLoggedIn, isLoggedOut, authPage } = require('../middleware/route-guard')
+
 
 // 2. ROUTES
 
 // SIGNUP
 
-router.get('/signup', authController.signup)
+router.get('/signup', isLoggedOut, authController.signup)
 
-router.post('/signup', authController.createUser)
+router.post('/signup', isLoggedOut, authController.createUser)
 
 // USER PROFILE
 
-router.get('/userprofile', authController.userProfile)
+router.get('/userprofile', isLoggedIn, authController.userProfile)
 
 // LOGIN
 
-router.get('/login', authController.login)
+router.get('/login', isLoggedOut, authController.login)
 
-router.post('/login', authController.processLogin)
+router.post('/login', isLoggedOut, authController.processLogin)
 
 // LOGOUT
 
-router.post('/logout', authController.logout)
+router.post('/logout', isLoggedIn, authController.logout)
 
 //
 
