@@ -10,7 +10,7 @@
 
 
 const isLoggedIn = (req, res, next) => {
-    if (!req.ression.actualUser) {
+    if (!req.session.actualUser) {
         return res.redirect('/login')
     }
 

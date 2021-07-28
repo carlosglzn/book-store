@@ -87,7 +87,7 @@ exports.editProduct = async (req, res) => {
 exports.updateProduct = async (req, res) => {
 
     const { id } = req.params
-    const { name, author, existingImage } = req.body
+    const { name, author, existingImage, category, price, language, synopsis } = req.body
 
     let imageUrl
 
@@ -97,7 +97,7 @@ exports.updateProduct = async (req, res) => {
         imageUrl = existingImage
     }
 
-    Product.findByIdAndUpdate(id, { name, author, imageUrl }, {new: true})
+    Product.findByIdAndUpdate(id, { name, author, imageUrl, category, price, language, synopsis }, {new: true})
         .then(() => {
             res.redirect('/products')
         })

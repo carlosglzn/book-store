@@ -1,4 +1,42 @@
-<h2 class="title">Update Product</h2>
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <div class="form-container-product">
+                    <h2 class="title">Update Product</h2>
+                    <form action="/productsAdmin/{{id}}/edit" method="POST" enctype="multipart/form-data">
+                        <h5>Name:</h5>
+                        <input type="text" name="name" class="form-control" value="{{name}}"/>
+                        <h5>Author</h5>
+                        <input type="text" name="author" class="form-control" value="{{author}}"/>
+                        <h5>Categoy</h5>
+                        <input type="text" name="category" class="form-control" value="{{category}}"/>
+                        <h5>Price:</h5>
+                        <input type="number" name="price" class="form-control" value="{{price}}"/>
+                        <h5>Language:</h5>
+                        <input type="text" name="language" class="form-control" value="{{language}}"/>
+                        <h5>Synopsis:</h5>
+                        <textarea name="synopsis" cols="30" rows="10" class="form-control">{{synopsis}}</textarea>
+                        <h5>Image:</h5>
+                        <input type="file" name="product-cover-image" class="form-control-file" />
+                        <input type="text" name="existingImage" hidden value="{{imageUrl}}" />
+                        <button type="submit" class="btn">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{{!-- <h2 class="title">Update Product</h2>
 
 <div class="row">
     <div>
@@ -17,7 +55,7 @@
             <br>
             <div>
             <label> Category:
-                <input type="text" name="category" class="form-control" value="{{categoy}}"/>
+                <input type="text" name="category" class="form-control" value="{{category}}"/>
             </label>
             </div>
             <br>
@@ -51,5 +89,5 @@
         </form>
 
     </div>
-    
-</div>
+
+</div> --}}

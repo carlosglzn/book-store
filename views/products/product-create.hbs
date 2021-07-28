@@ -1,12 +1,53 @@
-<h2 class="title">Create a Product</h2>
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <div class="form-container-product">
+                    <h2 class="title">Create Product</h2>
+                    <form action="/productsAdmin/create" method="POST" enctype="multipart/form-data">
+                        <h5>Name:</h5>
+                        <input type="text" name="name" class="form-control" />
+                        <h5>Author</h5>
+                        <input type="text" name="author" class="form-control" />
+                        <h5>Categoy</h5>
+                        <input type="text" name="category" class="form-control" />
+                        <h5>Price:</h5>
+                        <input type="number" name="price" class="form-control" />
+                        <h5>Language:</h5>
+                        <input type="text" name="language" class="form-control" />
+                        <h5>Synopsis:</h5>
+                        <textarea name="synopsis" cols="30" rows="10" class="form-control"></textarea>
+                        <h5>Image:</h5>
+                        <input type="file" name="product-cover-image" class="form-control" />
+                        <button type="submit" class="btn">Create Product</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <h2 class="title">Create a Product</h2>
 
 <div class='row'>
-    <div>
+    <div class="col-1">
         <form action="/products/create" method="POST" enctype="multipart/form-data">
         <div>
-            <label> Name:
-                <input type="text" name="name" class="form-control" />
-            </label>
+        <h5>Name:</h5>
+        <input type="text" name="name" class="form-control" />
+        
         </div>
         <br>
         <div>
@@ -51,4 +92,4 @@
     
     </div>
 
-</div>
+</div> --}}
