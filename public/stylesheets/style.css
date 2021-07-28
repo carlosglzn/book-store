@@ -145,6 +145,11 @@ p {
     margin-bottom: 20px;
 }
 
+.footer a {
+    text-decoration: none;
+    color: #8a8a8a;
+}
+
 .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
     min-width: 250px;
     margin-bottom: 20px;
@@ -303,7 +308,7 @@ input:focus {
 .form-container-large {
     background: white;
     width: 300px;
-    height: 520px;
+    height: 540px;
     position: relative;
     text-align: center;
     padding: 20px 0;
