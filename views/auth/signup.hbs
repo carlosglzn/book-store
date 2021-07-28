@@ -1,45 +1,65 @@
-<div id="form">
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+           <div class="col-2">
+               <img src="/images/banner_books.png" width="100%" alt="Books">
+           </div>
 
+           <div class="col-2">
+               <div class="form-container-large">
+                    <h2 class="title">Signup</h2> 
+
+                   <form action="/login" method="POST" id="LoginForm">
+                        <h4>First Name:</h4>
+                        <input type="text" name="firstName" placeholder="John" />
+                        <h4>Last Name:</h4>
+                        <input type="text" name="lastName" placeholder="Smith" />
+                        <h4>Email:</h4>
+                        <input type="email" name="email" placeholder="john@bookstore.com" />
+                        <h4>Password:</h4>
+                        <input type="password" name="password" placeholder="*********" />
+                        <button class="btn" type="submit">Login</button>
+                        <a href="/login">Already have an account? Login here.</a>
+                        {{#if msg}}
+                            <p class="error">{{msg}}</p>
+                        {{/if}}  
+                   </form>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{{!-- <div id="form">
     <h2 class="title" >Signup</h2>
-
     <form action="/signup" method="POST">
-
         <label> First Name:
             <input type="text" name="firstName" placeholder="John" />
         </label>
-
         <br>
         <br>
-
         <label> Last Name:
             <input type="text" name="lastName" placeholder="Smith" />
         </label>
-
         <br>
         <br>
-
         <label> Email:
             <input type="email" name="email" placeholder="john@bookstore.com" />
         </label>
-
         <br>
         <br>
-        
         <label> Password:
             <input type="password" name="password" placeholder="*********" />
         </label>
-        
         <br>
         <br>
-        
         <button class="btn" type="submit">Create Account!</button>
-
         {{#if msg}}
-
             <p class="error">{{msg}}</p>
-
-        {{/if}}
-    
+        {{/if}}   
     </form>
-
-</div>
+</div> --}}

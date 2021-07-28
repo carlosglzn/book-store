@@ -1,19 +1,27 @@
-<div id="form">
-    <h2 class="title">Login</h2>
-    <form action="/login" method="POST">
-        <label>Email:
-            <input type="email" name="email" placeholder="john@bookstore.com" />
-        </label>
-        <br>
-        <br>
-        <label>Password:
-            <input type="password" name="password" placeholder="*********" />
-        </label>
-        <br>
-        <br>
-        <button class="btn" type="submit">Login</button>
-        {{#if msg }}
-            <p class="error">{{ msg }}</p>
-        {{/if}}
-    </form>
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+           <div class="col-2">
+               <img src="/images/banner_books.png" width="100%" alt="Books">
+           </div>
+
+           <div class="col-2">
+               <div class="form-container">
+                    <h2 class="title">Login</h2> 
+
+                   <form action="/login" method="POST" id="LoginForm">
+                        <h4>Email:</h4>
+                        <input type="email" name="email" placeholder="john@bookstore.com" />
+                        <h4>Password:</h4>
+                        <input type="password" name="password" placeholder="*********" />
+                        <button class="btn" type="submit">Login</button>
+                        <a href="/signup">Don't have an account?</a>
+                        {{#if msg}}
+                            <p class="error">{{msg}}</p>
+                        {{/if}}  
+                   </form>
+               </div>
+           </div>
+        </div>
+    </div>
 </div>
