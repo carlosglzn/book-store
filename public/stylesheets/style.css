@@ -19,6 +19,14 @@ nav {
     text-align: right;
 }
 
+nav button {
+    border: none;
+    background: none;
+    color: #361999;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 nav ul {
     display: inline-block;
     list-style-type: none;
@@ -37,6 +45,7 @@ a {
 p {
     color: #555;
 }
+
 
 .container {
     max-width: 1300px;
@@ -78,6 +87,23 @@ p {
     transition: background 0.5s;
 }
 
+.btn-buy {
+
+    background: #361999;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.btn-buy:hover {
+    background: #66559e;
+}
+
 .btn:hover {
     background: #66559e;
 }
@@ -92,6 +118,12 @@ p {
     padding-left: 25px;
     padding-right: 25px;
 }
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .col-3 {
     flex-basis: 25%;
@@ -430,4 +462,17 @@ td img {
     width: 50px;
     height: 80px;
     margin-right: 10px;
+}
+
+/* SUCCESS / CANCEL */
+
+.form-container-stripe {
+    background: white;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
 }

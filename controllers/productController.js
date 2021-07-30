@@ -107,6 +107,8 @@ exports.updateProduct = async (req, res) => {
 
 }
 
+
+
 // GET - /products/:id
 
 exports.productDetails = async (req, res) => {
@@ -122,6 +124,20 @@ exports.productDetails = async (req, res) => {
         })
         .catch((e) => {
             console.log(e)
+        })
+
+}
+
+// POST - /productsAdmin/:id/delete
+
+exports.deleteProduct = async (req, res) => {
+
+    const { id } = req.params
+
+    Product.findByIdAndDelete(id)
+        .then((productRemoved) => {
+            console.log(productRemoved)
+            res.redirect('/productsAdmin')
         })
 
 }

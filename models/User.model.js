@@ -31,11 +31,27 @@ const userSchema = new Schema(
             type: String
         },
         address: {
-            country: String,
-            street: String,
-            city: String,
-            state: String,
-            zip: Number
+            shipping: [{
+                country: String,
+                street: String,
+                city: String,
+                state: String,
+                zip: Number
+            }]
+        },
+        cart: {
+            items: [{
+                productId: {
+                    type: Schema.Types.ObjectId,
+                    ref: "Product",
+                    required: true
+                },
+                quantity: {
+                    type: Number,
+                    required: true
+                }
+            }],
+            totalPrice: Number
         }
     },
     {
@@ -43,6 +59,35 @@ const userSchema = new Schema(
     }
  
 );
+
+// userSchema.methods.addToCart = function(product) {
+
+//     let cart = this.cart
+
+//     if (cart.items.length == 0) {
+//         cart.items.push({productId: product._id, quantity: 1})
+//         cart.totalPrice = product.price
+//     } else {
+
+//         const isExisting = cart.items.findIndex(objInItems => objInItems.productId == product._id)
+
+//         if (isExisting == -1) {
+//             cart.items.push({productId: product._id, quantity: 1})
+//             cart.totalPrice += product.price
+//         } else {
+//             existingProductInCart = cart.items[isExisting]
+//             existingProductInCart.quantity += 1
+//             cart.totalPrice += product.price
+//         }
+//     }
+
+//     console.log('User in schema: ', this)
+//     return this.save()
+
+    
+
+// }
+
 
 // 3. MODEL
 

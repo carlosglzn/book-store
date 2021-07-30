@@ -102,7 +102,7 @@ exports.processLogin = async (req, res) => {
 
             console.log('Updated Session:', req.session)
 
-            return res.redirect('/userprofile')
+            return res.redirect('/')
 
         })
         .catch((e) => {

@@ -1,23 +1,21 @@
-{{#if actualUser}}
+<div class="account-page">   
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <div class="form-container-large">
 
-    <h2>Welcome, {{ actualUser.email}}!</h2>
-
-    <p>This is your profile page</p>
-
-    <button>
-
-        <a href="/userprofile">Reload the page</a>
-
-    </button>
-
-    <form id="logout-form" action="/logout" method="POST">
-
-        <button>Logout</button>
-
-    </form>
-
-{{else}}
-
-    <p>Still no logged in user, sorry!</p>
-    
-{{/if}}
+                        <h2 class="title">Welcome!</h2>
+                        <br>
+                        <p>This is your profile page</p>
+                        <br>
+                        <h5><u>First Name:</u> {{actualUser.firstName}}</h5>
+                        <br>
+                        <h5><u>Last Name:</u> {{actualUser.lastName}}</h5>
+                        <br>
+                        <h5><u>Email:</u> {{actualUser.email}}</h5>
+                        <img src="/images/auth.png" height="240px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

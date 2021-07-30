@@ -3,11 +3,27 @@
 const express               = require('express')
 const router                = express.Router()
 const checkoutController    = require('../controllers/checkoutController')
-const { isLoggedIn, isLoggedOut, authPage } = require('../middleware/route-guard')
+
+
+const { isLoggedIn, isLoggedOut} = require('../middleware/route-guard')
 
 // 2. ROUTES
 
-router.get('/cart', checkoutController.startCart)
+
+// STRIPE
+
+router.post('/:id/checkout', checkoutController.payment)
+
+router.get('/success', checkoutController.success)
+
+router.get('/cancel', checkoutController.cancel)
+
+// CART ROUTES
+
+// router.get('/cart', checkoutController.startCart)
+
+
+// router.post('/add-to-cart', checkoutController.addToCart)
 
 // 3. EXPORTS
 

@@ -16,26 +16,41 @@
     </head>
 
     <body>
+        {{#if actualUser}}
+
         <div class="container">
             <div class="navbar">
             <div class="logo">
                 <a href="/"><img src="/images/the_bookstore.png" alt="The Book Store logo" width="125px"></a>             
             </div>
             <nav>
-                {{#if actualUser}}
+                
 
                 <ul id="MenuItems">
                     <li><a href="/">Home</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/userprofile">Account</a></li>
                     <li>
-                        <form id="logout-form" action="/logout" method="POST">
+                        <form action="/logout" method="POST">
                             <button>Logout</button>
                         </form>
                     </li>
                 </ul>
+
+                </nav>
+                {{!-- <a href="/cart"><img src="/images/shopping-cart.png" alt="Cart Logo" width="25px" height="25px"></a>
+                <img src="/images/menu.png" alt="Menu" class="menu-icon" onclick="menutoggle()"> --}}
+                </div>
+            </div>
                 
                 {{else}}
+
+        <div class="container">
+            <div class="navbar">
+            <div class="logo">
+                <a href="/"><img src="/images/the_bookstore.png" alt="The Book Store logo" width="125px"></a>             
+            </div>
+            <nav>
 
                 <ul id="MenuItems">
                     <li><a href="/">Home</a></li>
@@ -44,12 +59,14 @@
                     <li><a href="/login">Login</a></li>
                 </ul>
 
-                {{/if}}
+                
             </nav>
-            <a href="/cart"><img src="/images/shopping-cart.png" alt="Cart Logo" width="25px" height="25px"></a>
-            <img src="/images/menu.png" alt="Menu" class="menu-icon" onclick="menutoggle()">
+            {{!-- <a href="/cart"><img src="/images/shopping-cart.png" alt="Cart Logo" width="25px" height="25px"></a>
+            <img src="/images/menu.png" alt="Menu" class="menu-icon" onclick="menutoggle()"> --}}
             </div>
         </div>
+
+        {{/if}}
      
         {{{body}}}
 
